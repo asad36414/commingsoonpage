@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comming Soon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Comming Soon</h1>
+    <div class="time">
+      <span><div id="days">00</div> Days</span>
+      <span><div id="hours">00</div> Hours</span>
+      <span><div id="minutes">00</div> Minutes</span>
+      <span><div id="seconds">00</div> Seconds</span>
+    </div>
+    <div class="sub">
+      <h4>Enter Email & Subscribe, So We Can Notify You When We Are Live</h4>
+      <form>
+        <input type="text" placeholder="Enter Your Email" class="text" name="" id="">
+        <input type="button" class="sub-button" value="Subscribe" name="" id="">
+      </form>
+    </div>
+  </div>
+  
+</body>
+
+<script>
+
+  var coming = new Date('Oct 1, 2022 00:00:00');
+
+  var d = document.getElementById('days');
+  var h = document.getElementById('hours');
+  var m = document.getElementById('minutes');
+  var s = document.getElementById('seconds');
+
+  var x = setInterval(function(){
+    var now = new Date();
+    var sel = coming.getTime() - now.getTime();
+
+    var days = Math.floor(sel/(1000 * 60 * 60 * 24));
+    var hours = Math.floor(sel%(1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+    var minutes = Math.floor(sel%(1000 * 60 * 60)/(1000*60));
+    var seconds = Math.floor(sel%(1000 * 60)/1000);
+
+    d.innerHTML = getNbr(days);
+    h.innerHTML = getNbr(hours);
+    m.innerHTML = getNbr(minutes);
+    s.innerHTML = getNbr(seconds);
+
+    if(sel<0){
+      clearInterval(x);
+      d.innerHTML = '00';
+      h.innerHTML = '00';
+      m.innerHTML = '00';
+      s.innerHTML = '00';
+    }
+  }, 1000);
+
+  function getNbr(x){
+    if(x<10){
+      return '0' + x;
+    }
+    else{
+      return x;
+    }
+  }
+
+</script>
+</html>

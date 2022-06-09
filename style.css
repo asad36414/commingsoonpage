@@ -1,0 +1,72 @@
+body{
+  background-image: url("4.jpg");
+  background-size: cover;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.container{
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h1{
+  color: white;
+  font-size: 90px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.time{
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.time span{
+  padding: 0 14px;
+  font-size: 10px;
+}
+
+.time span div{
+  font-size: 40px;
+}
+
+.sub{
+  width: 500px;
+}
+
+.sub h4{
+  color: white;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.sub input, .sub button{
+  display: block;
+  margin: 12px auto;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+}
+
+.sub .sub-button{
+  background: linear-gradient(125deg, #dd2d50, #e6360a);
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+  font-weight: bold;
+  font-size: 18px;
+}
